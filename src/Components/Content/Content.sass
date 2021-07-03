@@ -1,0 +1,67 @@
+.content
+    // outline: 1px solid #333
+    width: 547px
+    padding: 57px 0 0 55px
+    &__title
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px
+    &__list
+        padding-top: 52px
+        display: flex
+        flex-direction: column
+    &__item
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 14px
+    &__checked
+        width: 20px
+        height: 20px
+        border: 2px solid #E8E8E8
+        border-radius: 50%
+        margin-right: 15px
+
+    &-form
+        max-width: 415px
+        flex-direction: column
+        &__text
+            height: 38px
+            width: 100%
+            padding-left: 14px
+        &__btn
+            width: 145px
+            height: 34px
+        &__close
+            width: 90px
+            height: 34px
+        &__btn, &__close
+            margin-top: 16px
+
+
+@media screen and (max-width: 900px)
+    .content
+        width: 73vw
+        padding-left: 15px
+        &__title
+            font-size: 20px
+        &__list
+            padding-top: 52px
+            display: flex
+            flex-direction: column
+        &__item
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            font-family: Roboto
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+
+@media screen and (max-width: 670px)
+    .content
+        padding-left: 0

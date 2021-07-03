@@ -1,0 +1,51 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    color: #000000
+
+body
+    background: #7be3fd
+
+#root
+    margin-top: 30px
+
+
+ul li
+    list-style-type: none
+    display: inline-block
+
+.btn
+    width: 160px;
+    height: 37px
+    border: none
+    background: #F4F6F8
+    color: #767676
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+
+
+.form
+    flex-direction: column
+    &__text, &__btn
+        border-radius: 4px
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+    &__text
+        color: #C7C7C7
+        background: #FFFFFF
+        border: 1px solid #EFEFEF
+    &__text:focus 
+        outline: 0
+    &__checkbox
+        width: 20px
+        height: 20px
+        border-radius: 50%
+    &__btn
+        color: #fff
+        background: #4DD599
+        border: none

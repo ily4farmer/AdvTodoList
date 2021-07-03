@@ -128,9 +128,7 @@ function App() {
       taskCheckedHendler:taskCheckedHendler}}>
           <div className="App">
             <SideBar item={data.item} addItem={addItem} inputHandler={inputHandler} value={data.value}/> 
-            {/* <Content item={data.item} content={data.content}/> */}
             <div className="content">
-              {/* <Route path="/content/:id" component={Content}/> */}
               <Content/>
             </div>
           </div>

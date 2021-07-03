@@ -66,7 +66,7 @@ function App() {
     let item = a[indexs];
     if (data.contentValue !== '') {
       item.task = [...item.task ,{value: data.contentValue, checked: false}];
-      //Новый
+      //Новый content
       const content = {
         index: indexs,
         item: item.value,

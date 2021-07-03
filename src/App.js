@@ -116,10 +116,6 @@ function App() {
     localStorage.setItem('item', JSON.stringify(data.item));
     localStorage.setItem('a', JSON.stringify(data.a));
   }, [data.item, data.a]);
-
-  if (condition) {
-    
-  }
   
   return (
     <Context.Provider value={

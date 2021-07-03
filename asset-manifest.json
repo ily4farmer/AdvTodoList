@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/AdvTodoList/static/css/main.8732e257.chunk.css",
+    "main.js": "/AdvTodoList/static/js/main.f0f25e7b.chunk.js",
+    "main.js.map": "/AdvTodoList/static/js/main.f0f25e7b.chunk.js.map",
+    "runtime-main.js": "/AdvTodoList/static/js/runtime-main.7622a9cc.js",
+    "runtime-main.js.map": "/AdvTodoList/static/js/runtime-main.7622a9cc.js.map",
+    "static/js/2.ec6d309b.chunk.js": "/AdvTodoList/static/js/2.ec6d309b.chunk.js",
+    "static/js/2.ec6d309b.chunk.js.map": "/AdvTodoList/static/js/2.ec6d309b.chunk.js.map",
+    "index.html": "/AdvTodoList/index.html",
+    "static/css/main.8732e257.chunk.css.map": "/AdvTodoList/static/css/main.8732e257.chunk.css.map",
+    "static/js/2.ec6d309b.chunk.js.LICENSE.txt": "/AdvTodoList/static/js/2.ec6d309b.chunk.js.LICENSE.txt",
+    "static/media/close.618167a4.svg": "/AdvTodoList/static/media/close.618167a4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7622a9cc.js",
+    "static/js/2.ec6d309b.chunk.js",
+    "static/css/main.8732e257.chunk.css",
+    "static/js/main.f0f25e7b.chunk.js"
+  ]
+}

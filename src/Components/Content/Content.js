@@ -3,12 +3,14 @@ import { Context } from '../Context/Context';
 import Form from '../Form/Form';
 import "./Content.sass"
 
-const Content = () => {
+const Content = ({item}) => {
     const {route, taskCheckedHendler} = useContext(Context);
 
     return ( 
+        item == 0 || route == '' ?
+            <div></div>
+        :
         <Fragment>
-            
             <h3 className="content__title">{route.item}</h3>
             <ul className="content__list">
                 { route.task === [] || route.task === "" || route.task === undefined ? null :

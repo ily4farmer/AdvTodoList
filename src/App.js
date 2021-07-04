@@ -93,6 +93,7 @@ function App() {
       const value = {value: data.value, task: []};
       dispatch({type: "item", payload: [...data.item, value]});
       dispatch({type: "value", payload: ''}); 
+      dispatch({type: "route", payload: ''});
     }
   }
   // Удаление элемента из item sidebar
@@ -100,13 +101,14 @@ function App() {
     const newArr = [...data.item];
     newArr.splice(index, 1);
     dispatch({type: "item", payload: [...newArr]});
+    dispatch({type: "route", payload: ''});
   }
 
   // Получение данных из localStorage
   useEffect(()=> {
     //getItem надо использовать раньше, т.к. данный из localStorage не сохраняются
     const arr = localStorage.getItem('item');
-    const arr2 = localStorage.getItem('a');
+    const arr2 = localStorage.getItem('route');
     dispatch({type: "item", payload: JSON.parse(arr)});
     dispatch({type: "route", payload: JSON.parse(arr2)});
   }, []);
@@ -129,7 +131,7 @@ function App() {
           <div className="App">
             <SideBar item={data.item} addItem={addItem} inputHandler={inputHandler} value={data.value}/> 
             <div className="content">
-              {data.item == 0 ? null : <Content/>}
+              <Content item={data.item}/>
             </div>
           </div>
     </Context.Provider>

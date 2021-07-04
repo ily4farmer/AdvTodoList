@@ -4,16 +4,17 @@ import Form from '../Form/Form';
 import "./Content.sass"
 
 const Content = () => {
-    const {a, taskCheckedHendler} = useContext(Context);
+    const {route, taskCheckedHendler} = useContext(Context);
+
     return ( 
         <Fragment>
             
-            <h3 className="content__title">{a.item}</h3>
+            <h3 className="content__title">{route.item}</h3>
             <ul className="content__list">
-                { a.task === [] || a.task === "" || a.task === undefined ? null :
-                    a.task.map((item, index) => {
+                { route.task === [] || route.task === "" || route.task === undefined ? null :
+                    route.task.map((item, index) => {
                         return (
-                        <li key={index} onClick={() => taskCheckedHendler(item, index, a.index)} className="content__item">
+                        <li key={index} onClick={() => taskCheckedHendler(item, index, route.index)} className="content__item">
                             <div style={item.checked ? {backgroundColor: "#4DD599"} : {backgroundColor: "white"}} className="content__checked"></div>
                             <p className="content__text">{item.value}</p>
                         </li>
@@ -21,7 +22,7 @@ const Content = () => {
                     })
                 }
             </ul>
-            <Form index={a.index}/>
+            <Form index={route.index}/>
         </Fragment>
     );
 }

@@ -18,8 +18,8 @@ function reducer(state, action) {
       return  {...state, contentTask: action.payload}
     case "contentValue":
       return  {...state, contentValue: action.payload}
-    case "a":
-      return  {...state, a: action.payload}
+    case "route":
+      return  {...state, route: action.payload}
     case "reset":
       return  init(action.payload)
   
@@ -33,17 +33,17 @@ function App() {
     { item: [], 
       value: '', 
       contentValue: '',
-      a: ''
+      route: ''
     }, init);
 
 
-  function AddA(i, index, task) {
+  function AddRoute(i, index, task) {
     const data = {
       item: i,
       index, 
       task
     }
-    dispatch({type: "a", payload: data});
+    dispatch({type: "route", payload: data});
   
   }
 
@@ -62,8 +62,8 @@ function App() {
 
   const addTaskItem = (indexs, e) => {
     e.preventDefault();
-    const a  = [...data.item];
-    let item = a[indexs];
+    const items  = [...data.item];
+    let item = items[indexs];
     if (data.contentValue !== '') {
       item.task = [...item.task ,{value: data.contentValue, checked: false}];
       //Новый content
@@ -73,8 +73,8 @@ function App() {
         task: item.task
       }
       
-        dispatch({type: "item", payload: [...a]});
-        dispatch({type: "a", payload: content});
+        dispatch({type: "item", payload: [...items]});
+        dispatch({type: "route", payload: content});
         dispatch({type: "contentValue", payload: ''}); 
     }
   }
@@ -108,14 +108,14 @@ function App() {
     const arr = localStorage.getItem('item');
     const arr2 = localStorage.getItem('a');
     dispatch({type: "item", payload: JSON.parse(arr)});
-    dispatch({type: "a", payload: JSON.parse(arr2)});
+    dispatch({type: "route", payload: JSON.parse(arr2)});
   }, []);
 
   //Сохранение элементов item в localStorage
   useEffect(() => {
     localStorage.setItem('item', JSON.stringify(data.item));
-    localStorage.setItem('a', JSON.stringify(data.a));
-  }, [data.item, data.a]);
+    localStorage.setItem('route', JSON.stringify(data.route));
+  }, [data.item, data.route]);
   
   return (
     <Context.Provider value={
@@ -123,13 +123,13 @@ function App() {
       addTaskItem:addTaskItem,
       contentInput:contentInput,
       contentValue: data.contentValue,
-      AddA: AddA,
-      a: data.a,
+      AddRoute: AddRoute,
+      route: data.route,
       taskCheckedHendler:taskCheckedHendler}}>
           <div className="App">
             <SideBar item={data.item} addItem={addItem} inputHandler={inputHandler} value={data.value}/> 
             <div className="content">
-              <Content/>
+              {data.item == 0 ? null : <Content/>}
             </div>
           </div>
     </Context.Provider>

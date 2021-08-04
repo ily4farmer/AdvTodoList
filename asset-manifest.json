@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/AdvTodoList/static/css/main.6605c2db.chunk.css",
-    "main.js": "/AdvTodoList/static/js/main.2056b135.chunk.js",
-    "main.js.map": "/AdvTodoList/static/js/main.2056b135.chunk.js.map",
+    "main.css": "/AdvTodoList/static/css/main.888da979.chunk.css",
+    "main.js": "/AdvTodoList/static/js/main.6e6e5fdc.chunk.js",
+    "main.js.map": "/AdvTodoList/static/js/main.6e6e5fdc.chunk.js.map",
     "runtime-main.js": "/AdvTodoList/static/js/runtime-main.7622a9cc.js",
     "runtime-main.js.map": "/AdvTodoList/static/js/runtime-main.7622a9cc.js.map",
     "static/js/2.ec6d309b.chunk.js": "/AdvTodoList/static/js/2.ec6d309b.chunk.js",
     "static/js/2.ec6d309b.chunk.js.map": "/AdvTodoList/static/js/2.ec6d309b.chunk.js.map",
     "index.html": "/AdvTodoList/index.html",
-    "static/css/main.6605c2db.chunk.css.map": "/AdvTodoList/static/css/main.6605c2db.chunk.css.map",
+    "static/css/main.888da979.chunk.css.map": "/AdvTodoList/static/css/main.888da979.chunk.css.map",
     "static/js/2.ec6d309b.chunk.js.LICENSE.txt": "/AdvTodoList/static/js/2.ec6d309b.chunk.js.LICENSE.txt",
-    "static/media/close.618167a4.svg": "/AdvTodoList/static/media/close.618167a4.svg"
+    "static/media/close.ece778a2.svg": "/AdvTodoList/static/media/close.ece778a2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7622a9cc.js",
     "static/js/2.ec6d309b.chunk.js",
-    "static/css/main.6605c2db.chunk.css",
-    "static/js/main.2056b135.chunk.js"
+    "static/css/main.888da979.chunk.css",
+    "static/js/main.6e6e5fdc.chunk.js"
   ]
 }

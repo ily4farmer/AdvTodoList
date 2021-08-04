@@ -3,30 +3,7 @@ import './App.sass';
 import Content from './Components/Content/Content';
 import { Context } from './Components/Context/Context';
 import SideBar from './Components/SideBar/SideBar';
-
-function init(state) {
-  return {...state};
-}
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "item":
-      return  {...state, item: action.payload}
-    case "value":
-      return  {...state, value: action.payload}
-    case "contentTask":
-      return  {...state, contentTask: action.payload}
-    case "contentValue":
-      return  {...state, contentValue: action.payload}
-    case "route":
-      return  {...state, route: action.payload}
-    case "reset":
-      return  init(action.payload)
-  
-    default:
-      return state;
-  }
-}
+import { init, reducer } from './Reducer';
 
 function App() {
   const [data, dispatch] = useReducer(reducer, 
@@ -44,7 +21,6 @@ function App() {
       task
     }
     dispatch({type: "route", payload: data});
-  
   }
 
   //Content
@@ -127,9 +103,10 @@ function App() {
       contentValue: data.contentValue,
       AddRoute: AddRoute,
       route: data.route,
+      visible: data.visible,
       taskCheckedHendler:taskCheckedHendler}}>
           <div className="App">
-            <SideBar item={data.item} addItem={addItem} inputHandler={inputHandler} value={data.value}/> 
+            <SideBar item={data.item}  addItem={addItem} inputHandler={inputHandler} value={data.value}/> 
             <div className="content">
               <Content item={data.item}/>
             </div>

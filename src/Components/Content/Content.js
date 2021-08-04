@@ -7,8 +7,8 @@ const Content = ({item}) => {
     const {route, taskCheckedHendler} = useContext(Context);
 
     return ( 
-        item == 0 || route == '' ?
-            <div></div>
+        item === 0 || route === "" ?
+            <div className="content__none">Здесь пока нет задач</div>
         :
         <Fragment>
             <h3 className="content__title">{route.item}</h3>
